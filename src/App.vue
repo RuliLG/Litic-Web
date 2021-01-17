@@ -3,7 +3,7 @@
     <transition name="fade">
       <Notification title="Copied!" text="Command has successfully been copied to your clipboard." v-if="shouldDisplayNotification" />
     </transition>
-    <Banner @copy="displayNotification" @analysis="analise" />
+    <Banner @copy="displayNotification" @analysis="analyse" />
   </div>
 </template>
 
