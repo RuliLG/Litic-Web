@@ -5,14 +5,14 @@
       <p class="text-gray-600 text-xl text-center mt-8" data-aos="fade-up" data-aos-duration="600">
         Analyze your website and get insights about SEO, accesibility, security and best practices in less than a minute.
       </p>
-      <form class="block max-w-4xl mx-auto flex gap-8 mt-4" data-aos="fade-up" data-aos-duration="1000">
+      <form class="block max-w-4xl mx-auto flex gap-8 mt-4" data-aos="fade-up" data-aos-duration="1000" action="#" method="POST" @submit.prevent="onSubmit">
         <label class="block text-sm font-semibold flex-1">
           URL
-          <input type="text" placeholder="Your URL here" class="block w-full p-4 rounded-lg border border-gray-300 mt-2">
+          <input type="text" placeholder="Your URL here" class="block w-full p-4 rounded-lg border border-gray-300 mt-2" v-model="url">
         </label>
         <label class="block text-sm font-semibold flex-1">
-          Keyword
-          <input type="text" placeholder="Search keyword" class="block w-full p-4 rounded-lg border border-gray-300 mt-2">
+          Keyword <small class="text-xs text-gray-600 pl-1">- Optional</small>
+          <input type="text" placeholder="Search keyword" class="block w-full p-4 rounded-lg border border-gray-300 mt-2" v-model="keyword">
         </label>
         <div class="flex items-end">
           <button type="submit" class="w-full inline-flex justify-center items-center px-8 py-4 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
@@ -39,10 +39,19 @@ import copy from 'copy-to-clipboard'
 
 export default {
   name: 'Banner',
+  data () {
+    return {
+      url: '',
+      keyword: ''
+    }
+  },
   methods: {
     copyCommand () {
       copy('npm install litic')
       this.$emit('copy')
+    },
+    onSubmit () {
+      this.$emit('analysis', this.url, this.keyword)
     }
   }
 }

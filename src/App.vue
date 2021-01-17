@@ -3,7 +3,7 @@
     <transition name="fade">
       <Notification title="Copied!" text="Command has successfully been copied to your clipboard." v-if="shouldDisplayNotification" />
     </transition>
-    <Banner @copy="displayNotification" />
+    <Banner @copy="displayNotification" @analysis="analise" />
   </div>
 </template>
 
@@ -28,6 +28,26 @@ export default {
       setTimeout(() => {
         this.shouldDisplayNotification = false
       }, 2000)
+    },
+    analyse (url, keyword) {
+      fetch('https://litic.herokuapp.com/invoke', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          url,
+          keyword: keyword.length > 0 ? keyword : undefined
+        })
+      })
+        .then(response => response.json())
+        .then(json => {
+          console.log(json)
+        })
+        .catch(error => {
+          console.log(error)
+        })
     }
   }
 }
