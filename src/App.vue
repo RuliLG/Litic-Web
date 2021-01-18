@@ -4,7 +4,7 @@
       <Notification title="Copied!" text="Command has successfully been copied to your clipboard." v-if="shouldDisplayNotification" />
     </transition>
     <Banner @copy="displayNotification" @analysis="analyse" />
-    <Results :results="results" :loading="loading" ref="results" />
+    <Results :results="results" :status="status" ref="results" v-if="status || results" />
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   data () {
     return {
       shouldDisplayNotification: false,
-      loading: false,
+      status: null,
       results: null
     }
   },
@@ -35,12 +35,11 @@ export default {
       }, 2000)
     },
     analyse (url, keyword) {
-      if (this.loading) {
+      if (this.status === 'loading') {
         return
       }
 
-      this.results = null
-      this.loading = true
+      this.status = 'loading'
       setTimeout(() => {
         this.$refs.results.$el.scrollIntoView({ behavior: 'smooth' })
       }, 200)
@@ -58,10 +57,11 @@ export default {
       })
         .then(response => response.json())
         .then(json => {
+          this.status = null
           this.results = json.results
         })
-        .catch(error => {
-          // console.log(error)
+        .catch(() => {
+          this.status = 'error'
         })
     }
   }
