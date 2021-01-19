@@ -22,7 +22,7 @@
       </form>
       <div class="mt-16" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
         <p class="text-lg text-gray-600 text-center">You can also install it and use it locally</p>
-        <pre class="max-w-md mx-auto mt-8 bg-gray-900 p-4 rounded-lg text-gray-100 text-center select-none cursor-pointer" @click="copyCommand">$ npm install litic</pre>
+        <pre class="max-w-md mx-auto mt-8 bg-gray-900 p-4 rounded-lg text-gray-100 text-center select-none cursor-pointer" @click="copyCommand">$ npm install litic -g</pre>
         <div class="text-center mt-8">
           <a href="https://github.com/RuliLG/Litic" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 rounded-lg border border-gray-300 text-gray-800 hover:bg-gray-100">
             View on GitHub
