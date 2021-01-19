@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     copyCommand () {
-      copy('npm install litic')
+      copy('npm install litic -g')
       this.$emit('copy')
     },
     onSubmit () {
