@@ -40,6 +40,8 @@ export default {
       }
 
       this.status = 'loading'
+      window.fathom && window.fathom.trackGoal('2Z7YNGXI', 0)
+
       setTimeout(() => {
         this.$refs.results.$el.scrollIntoView({ behavior: 'smooth' })
       }, 200)
