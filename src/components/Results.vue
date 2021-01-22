@@ -4,7 +4,7 @@
     class="h-screen flex justify-center items-center p-4 text-white text-4xl text-center lg:text-6xl transition duration-500"
     :class="bg"
   >
-    Fetching data
+    Running analysis...
     <span v-for="dot in dots" :key="dot">.</span>
   </div>
   <div
