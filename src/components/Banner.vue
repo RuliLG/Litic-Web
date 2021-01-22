@@ -9,7 +9,7 @@
         <form class="max-w-4xl mx-auto flex flex-col mt-4 lg:flex-row" data-aos="fade-up" data-aos-duration="1000" action="#" method="POST" @submit.prevent="onSubmit">
           <label class="block text-sm font-semibold flex-1 lg:pr-2">
             URL
-            <input type="text" placeholder="Your URL here" class="block w-full p-4 rounded-lg border border-gray-300 mt-2" v-model="url" autofocus>
+            <input type="url" placeholder="Your URL here" class="block w-full p-4 rounded-lg border border-gray-300 mt-2" v-model="url" autofocus>
           </label>
           <label class="block text-sm font-semibold flex-1 mt-4 lg:mt-0 lg:px-2">
             Keyword <small class="text-xs text-gray-600 pl-1">- Optional</small>
