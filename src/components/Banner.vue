@@ -4,7 +4,7 @@
       <div class="relative max-w-xl mx-auto">
         <h1 class="font-litic text-green-600 text-4xl text-left md:text-6xl" data-aos="fade-down" data-aos-duration="600">Litic</h1>
         <p class="text-gray-600 text-xl text-left mt-8" data-aos="fade-up" data-aos-duration="600">
-          Analyze your website and get insights about SEO, accesibility, security and best practices in less than a minute.
+          Analyze your website and get insights about SEO, accessibility, security, and best practices in less than a minute.
         </p>
         <form class="max-w-4xl mx-auto flex flex-col gap-8 mt-4 lg:flex-row" data-aos="fade-up" data-aos-duration="1000" action="#" method="POST" @submit.prevent="onSubmit">
           <label class="block text-sm font-semibold flex-1">
