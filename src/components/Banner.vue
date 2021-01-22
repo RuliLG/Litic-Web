@@ -6,16 +6,16 @@
         <p class="text-gray-600 text-xl text-left mt-8" data-aos="fade-up" data-aos-duration="600">
           Analyze your website and get insights about SEO, accessibility, security, and best practices in less than a minute.
         </p>
-        <form class="max-w-4xl mx-auto flex flex-col gap-8 mt-4 lg:flex-row" data-aos="fade-up" data-aos-duration="1000" action="#" method="POST" @submit.prevent="onSubmit">
-          <label class="block text-sm font-semibold flex-1">
+        <form class="max-w-4xl mx-auto flex flex-col mt-4 lg:flex-row" data-aos="fade-up" data-aos-duration="1000" action="#" method="POST" @submit.prevent="onSubmit">
+          <label class="block text-sm font-semibold flex-1 lg:pr-2">
             URL
             <input type="text" placeholder="Your URL here" class="block w-full p-4 rounded-lg border border-gray-300 mt-2" v-model="url" autofocus>
           </label>
-          <label class="block text-sm font-semibold flex-1">
+          <label class="block text-sm font-semibold flex-1 mt-4 lg:mt-0 lg:px-2">
             Keyword <small class="text-xs text-gray-600 pl-1">- Optional</small>
             <input type="text" placeholder="Search keyword" class="block w-full p-4 rounded-lg border border-gray-300 mt-2" v-model="keyword">
           </label>
-          <div class="flex items-end">
+          <div class="flex items-end mt-4 lg:mt-0 lg:pl-2">
             <button type="submit" class="w-full inline-flex justify-center items-center px-8 py-4 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
               Analyze
             </button>
