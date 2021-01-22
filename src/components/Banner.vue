@@ -1,12 +1,12 @@
 <template>
-  <div class="h-screen flex items-center justify-center bg-white">
-    <div class="container mx-auto px-4 sm:px-6 md:grid md:grid-cols-2 md:gap-8 lg:px-8">
-      <div class="relative">
+  <div class="py-16 flex items-center justify-center bg-white md:min-h-screen">
+    <div class="container mx-auto px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:px-8">
+      <div class="relative max-w-xl mx-auto">
         <h1 class="font-litic text-green-600 text-4xl text-left md:text-6xl" data-aos="fade-down" data-aos-duration="600">Litic</h1>
         <p class="text-gray-600 text-xl text-left mt-8" data-aos="fade-up" data-aos-duration="600">
           Analyze your website and get insights about SEO, accesibility, security and best practices in less than a minute.
         </p>
-        <form class="max-w-4xl mx-auto flex gap-8 mt-4" data-aos="fade-up" data-aos-duration="1000" action="#" method="POST" @submit.prevent="onSubmit">
+        <form class="max-w-4xl mx-auto flex flex-col gap-8 mt-4 lg:flex-row" data-aos="fade-up" data-aos-duration="1000" action="#" method="POST" @submit.prevent="onSubmit">
           <label class="block text-sm font-semibold flex-1">
             URL
             <input type="text" placeholder="Your URL here" class="block w-full p-4 rounded-lg border border-gray-300 mt-2" v-model="url" autofocus>
@@ -32,8 +32,8 @@
           </div>
         </div>
       </div>
-      <div data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">
-        <img src="@/assets/app_development.svg" alt="Illustration of a laptop with some HTML code on it" class="block w-full max-w-lg mx-auto">
+      <div class="hidden lg:block">
+        <img src="@/assets/app_development.svg" alt="Illustration of a laptop with some HTML code on it" class="block w-full max-w-lg mx-auto" data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">
       </div>
     </div>
   </div>
