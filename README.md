@@ -27,3 +27,9 @@ You can deploy your new Vue.js project with a single command from your terminal 
 ```shell
 $ vercel
 ```
+
+## Notes
+Please note this repository is linked with the API and the actual JS library:
+
+- [Litic JS Library](https://github.com/RuliLG/Litic)
+- [Litic API](https://github.com/RuliLG/Litic-API)
